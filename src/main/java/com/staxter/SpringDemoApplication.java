@@ -1,4 +1,4 @@
-package com.staxter.app;
+package com.staxter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
