@@ -34,4 +34,10 @@ class TestData {
         return user
     }
 
+    static getUserLoginDto() {
+        def userLoginDto = new UserLoginDto()
+        userLoginDto.userName = "john.travolta"
+        userLoginDto.password = "password"
+        return userLoginDto
+    }
 }

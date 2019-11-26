@@ -1,6 +1,7 @@
 package com.staxter.userrepository.impl
 
 import com.staxter.userrepository.UserAlreadyExistsException
+import com.staxter.userrepository.UserDoesNotExistsException
 import spock.lang.Specification
 
 import static com.staxter.TestData.getUser
@@ -29,5 +30,25 @@ class UserRepositoryTest extends Specification {
 
         then:
         thrown(UserAlreadyExistsException)
+    }
+
+    def "should return existing user"() {
+        given:
+        def user = getUser()
+        tested.createUser(user)
+
+        when:
+        def result = tested.findUser(user.userName)
+
+        then:
+        result == user
+    }
+
+    def "should throw exception as user with given username does not exists"() {
+        when:
+        tested.findUser("not_existing_user")
+
+        then:
+        thrown(UserDoesNotExistsException)
     }
 }
