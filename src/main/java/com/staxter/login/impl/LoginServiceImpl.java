@@ -1,6 +1,7 @@
 package com.staxter.login.impl;
 
 import com.staxter.login.LoginService;
+import com.staxter.login.WrongCredentialsException;
 import com.staxter.userrepository.UserDtoConverter;
 import com.staxter.userrepository.UserLoginDto;
 import com.staxter.userrepository.UserDto;

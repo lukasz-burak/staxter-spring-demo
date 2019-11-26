@@ -1,5 +1,6 @@
 package com.staxter.login.impl
 
+import com.staxter.login.WrongCredentialsException
 import com.staxter.userrepository.UserDoesNotExistsException
 import com.staxter.userrepository.UserDtoConverter
 import com.staxter.userrepository.UserRepository
